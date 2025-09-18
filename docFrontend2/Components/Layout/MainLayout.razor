@@ -1,0 +1,48 @@
+﻿@inherits LayoutComponentBase
+@namespace docFrontend2.Components.Layout
+@inject NavigationManager Navigation
+
+<div class="main-layout container">
+    
+    @if(!IsLoginOrDashboardPage())
+    {
+        <header class="mb-4">
+            <nav style="position: fixed; top: 0; left: 0; width: 100%; background-color: #2c3e50; z-index: 1000; padding: 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2>Welcome to NutriNest</h2>
+            <a href="/" class="me-3" style="color: white; text-decoration: none; margin-right: 40px;">Home</a>
+            <a href="/doctor-register" class="me-3" style="color: white; text-decoration: none; margin-right: 40px;">Register as Doctor</a>
+            <a href="/login-page" style="color: white; text-decoration: none;"> Log in</a>
+            </nav>
+        </header>
+    }
+    
+
+    <div class="content">
+        @Body
+    </div>
+
+</div>
+
+@code{
+     private bool IsLoginOrDashboardPage()
+    {
+        var currentUrl = Navigation.Uri;
+        return currentUrl.Contains("/login-page") || 
+               currentUrl.Contains("/doctor-dashboard");
+    }
+    
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += OnLocationChanged;
+    }
+    
+    private void OnLocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        StateHasChanged(); // Refresh the component when navigation occurs
+    }
+    
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
+    }
+}

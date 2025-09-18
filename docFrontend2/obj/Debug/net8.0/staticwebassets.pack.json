@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\mano\\fyp\\Docsystem\\docFrontend2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\docfrontend2.bundle.scp.css",
+      "PackagePath": "staticwebassets\\docfrontend2.orof2q0w0z.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\mano\\fyp\\Docsystem\\docFrontend2\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\mano\\fyp\\Docsystem\\docFrontend2\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\mano\\fyp\\Docsystem\\docFrontend2\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\mano\\fyp\\Docsystem\\docFrontend2\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\mano\\fyp\\Docsystem\\docFrontend2\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.docfrontend2.props",
+      "PackagePath": "build\\docfrontend2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.docfrontend2.props",
+      "PackagePath": "buildMultiTargeting\\docfrontend2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.docfrontend2.props",
+      "PackagePath": "buildTransitive\\docfrontend2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.docfrontend2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.docfrontend2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

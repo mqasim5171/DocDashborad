@@ -1,0 +1,182 @@
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/appsettings.Development.json
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/appsettings.json
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/doc.staticwebassets.endpoints.json
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/doc.exe
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/doc.deps.json
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/doc.runtimeconfig.json
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/doc.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/doc.pdb
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/DnsClient.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/Microsoft.OpenApi.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/MongoDB.Bson.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/MongoDB.Driver.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/SharpCompress.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/Snappier.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/mano/fyp/doc/doc/bin/Debug/net8.0/ZstdSharp.dll
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.csproj.AssemblyReference.cache
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.GeneratedMSBuildEditorConfig.editorconfig
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.AssemblyInfoInputs.cache
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.AssemblyInfo.cs
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.csproj.CoreCompileInputs.cache
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.MvcApplicationPartsAssemblyInfo.cs
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.MvcApplicationPartsAssemblyInfo.cache
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/scopedcss/bundle/doc.styles.css
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets.build.json
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets.development.json
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets/msbuild.doc.Microsoft.AspNetCore.StaticWebAssets.props
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets/msbuild.doc.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets/msbuild.build.doc.props
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.doc.props
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.doc.props
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets.pack.json
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/staticwebassets.upToDateCheck.txt
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.csproj.Up2Date
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.dll
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/refint/doc.dll
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.pdb
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/doc.genruntimeconfig.cache
+D:/mano/fyp/doc/doc/obj/Debug/net8.0/ref/doc.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/appsettings.Development.json
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/appsettings.json
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/doc.staticwebassets.endpoints.json
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/doc
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/doc.deps.json
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/doc.runtimeconfig.json
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/doc.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/doc.pdb
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/DnsClient.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Binder.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/MongoDB.Bson.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/MongoDB.Driver.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/SharpCompress.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Snappier.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/macbookair/Downloads/doc/doc/bin/Debug/net8.0/ZstdSharp.dll
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.csproj.AssemblyReference.cache
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.AssemblyInfoInputs.cache
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.AssemblyInfo.cs
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.csproj.CoreCompileInputs.cache
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.MvcApplicationPartsAssemblyInfo.cs
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.MvcApplicationPartsAssemblyInfo.cache
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/rjimswa.dswa.cache.json
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/scopedcss/bundle/doc.styles.css
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/staticwebassets.build.json
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/staticwebassets.build.json.cache
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/staticwebassets.development.json
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.csproj.Up2Date
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.dll
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/refint/doc.dll
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.pdb
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/doc.genruntimeconfig.cache
+/Users/macbookair/Downloads/doc/doc/obj/Debug/net8.0/ref/doc.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\appsettings.Development.json
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\appsettings.json
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\doc.staticwebassets.endpoints.json
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\doc.exe
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\doc.deps.json
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\doc.runtimeconfig.json
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\doc.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\doc.pdb
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\DnsClient.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\MongoDB.Bson.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\MongoDB.Driver.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\SharpCompress.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Snappier.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\mano\fyp copy\Docsystem\doc\doc\bin\Debug\net8.0\ZstdSharp.dll
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.csproj.AssemblyReference.cache
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.GeneratedMSBuildEditorConfig.editorconfig
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.AssemblyInfoInputs.cache
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.AssemblyInfo.cs
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.csproj.CoreCompileInputs.cache
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.MvcApplicationPartsAssemblyInfo.cs
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.MvcApplicationPartsAssemblyInfo.cache
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\scopedcss\bundle\doc.styles.css
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets.build.json
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets.development.json
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.doc.Microsoft.AspNetCore.StaticWebAssets.props
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.doc.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.build.doc.props
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.doc.props
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.doc.props
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets.pack.json
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.csproj.Up2Date
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.dll
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\refint\doc.dll
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.pdb
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\doc.genruntimeconfig.cache
+D:\mano\fyp copy\Docsystem\doc\doc\obj\Debug\net8.0\ref\doc.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\appsettings.Development.json
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\appsettings.json
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\doc.staticwebassets.endpoints.json
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\doc.exe
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\doc.deps.json
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\doc.runtimeconfig.json
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\doc.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\doc.pdb
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\DnsClient.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\MongoDB.Bson.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\MongoDB.Driver.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\SharpCompress.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Snappier.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\mano\fyp\Docsystem\doc\doc\bin\Debug\net8.0\ZstdSharp.dll
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.csproj.AssemblyReference.cache
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.GeneratedMSBuildEditorConfig.editorconfig
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.AssemblyInfoInputs.cache
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.AssemblyInfo.cs
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.csproj.CoreCompileInputs.cache
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.MvcApplicationPartsAssemblyInfo.cs
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.MvcApplicationPartsAssemblyInfo.cache
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\scopedcss\bundle\doc.styles.css
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets.build.json
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets.development.json
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.doc.Microsoft.AspNetCore.StaticWebAssets.props
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.doc.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.build.doc.props
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.doc.props
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.doc.props
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\staticwebassets.pack.json
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.csproj.Up2Date
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.dll
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\refint\doc.dll
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.pdb
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\doc.genruntimeconfig.cache
+D:\mano\fyp\Docsystem\doc\doc\obj\Debug\net8.0\ref\doc.dll

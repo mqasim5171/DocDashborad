@@ -1,0 +1,24 @@
+@page "/"
+@layout docFrontend2.Components.Layout.MainLayout
+@inject UserSessionService UserSessionService  // Inject the session service to access the logged-in doctor's ID
+@inject NavigationManager Nav
+
+<!--
+<p>
+    <button class="btn btn-primary me-2" @onclick="GoToRegister">Register as Doctor</button>
+    <button class="btn btn-secondary" @onclick="GoToDashboard">View Dashboard</button>
+</p>
+-->
+
+@code {
+    private void GoToRegister()
+    {
+        Nav.NavigateTo("/doctor-register");
+    }
+
+    private void GoToDashboard()
+    {
+        // Navigate to the logged-in doctor's dashboard using the ID stored in the session
+     Nav.NavigateTo("/doctor-dashboard");
+    }
+}

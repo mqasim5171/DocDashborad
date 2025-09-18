@@ -1,0 +1,209 @@
+﻿@page "/doctor-register"
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject NavigationManager Nav
+@inject UserSessionService UserSessionService
+
+<style>
+    .form-container { max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+    .form-group input, .form-group select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+    .btn { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin: 5px; }
+    .btn-primary { background-color: #007bff; color: white; }
+    .btn-secondary { background-color: #6c757d; color: white; }
+    .btn-success { background-color: #28a745; color: white; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .step-indicator { text-align: center; margin-bottom: 20px; font-size: 18px; font-weight: bold; }
+    .alert { padding: 10px; margin-bottom: 15px; border-radius: 4px; }
+    .alert-danger { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    .alert-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+    .hint { font-size: 12px; color: #888; margin-top: 4px; }
+</style>
+
+<div class="form-container">
+    <div class="step-indicator">Step @step of 2</div>
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger">@errorMessage</div>
+    }
+
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <div class="alert alert-success">@successMessage</div>
+    }
+
+    @if (step == 1)
+    {
+        <h3>Personal Information</h3>
+        <div class="form-group">
+            <label>Name *</label>
+            <input type="text" @bind="doctor.Name" @bind:event="oninput" />
+            @if (triedNext && string.IsNullOrWhiteSpace(doctor.Name))
+            {
+                <div class="hint">Name is required.</div>
+            }
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <select @bind="doctor.Gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Age *</label>
+            <input type="number" @bind="doctor.Age" @bind:event="oninput" min="1" />
+            @if (triedNext && doctor.Age <= 0)
+            {
+                <div class="hint">Age must be greater than 0.</div>
+            }
+        </div>
+
+        <div class="form-group">
+            <label>Email *</label>
+            <input type="email" @bind="doctor.Email" @bind:event="oninput" />
+            @if (triedNext && string.IsNullOrWhiteSpace(doctor.Email))
+            {
+                <div class="hint">Email is required.</div>
+            }
+        </div>
+
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-primary" @onclick="NextStep">Next →</button>
+        </div>
+    }
+    else if (step == 2)
+    {
+        <h3>Professional Information</h3>
+        <div class="form-group">
+            <label>Specialization *</label>
+            <input type="text" @bind="doctor.Specialization" @bind:event="oninput" />
+        </div>
+
+        <div class="form-group">
+            <label>Department</label>
+            <input type="text" @bind="doctor.Department" />
+        </div>
+
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" @bind="doctor.Phone" />
+        </div>
+
+        <div class="form-group">
+            <label>Experience (Years)</label>
+            <input type="number" @bind="doctor.ExperienceYears" min="0" max="50" @bind:event="oninput" />
+        </div>
+
+        <div class="form-group">
+            <label>Consultation Fee ($)</label>
+            <input type="number" @bind="doctor.ConsultationFee" min="0" step="0.01" @bind:event="oninput" />
+        </div>
+
+        <div style="display: flex; justify-content: space-between;">
+            <button type="button" class="btn btn-secondary" @onclick="PrevStep">← Previous</button>
+            <button type="button" class="btn btn-success" @onclick="SubmitForm" disabled="@isSubmitting">
+                @if (isSubmitting)
+                {
+                    <text>Submitting...</text>
+                }
+                else
+                {
+                    <text>Register Doctor</text>
+                }
+            </button>
+        </div>
+    }
+</div>
+
+@code {
+    private int step = 1;
+    private Doctor doctor = new Doctor();
+    private string errorMessage = "";
+    private string successMessage = "";
+    private bool isSubmitting = false;
+    private bool triedNext = false;
+
+    private void NextStep()
+    {
+        triedNext = true;
+        if (IsStep1Valid())
+        {
+            step = 2;
+            StateHasChanged();
+        }
+    }
+
+    private void PrevStep()
+    {
+        step = 1;
+        StateHasChanged();
+    }
+
+    private bool IsStep1Valid()
+    {
+        return !string.IsNullOrWhiteSpace(doctor.Name)
+            && !string.IsNullOrWhiteSpace(doctor.Email)
+            && doctor.Age > 0;
+    }
+
+    private async Task SubmitForm()
+    {
+        if (string.IsNullOrWhiteSpace(doctor.Specialization))
+        {
+            errorMessage = "Specialization is required.";
+            return;
+        }
+
+        isSubmitting = true;
+        errorMessage = "";
+        successMessage = "";
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/doctors/register", doctor);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Doctor registered successfully!";
+                
+
+                // Navigate to the doctor's dashboard
+                Nav.NavigateTo("/doctor-dashboard");
+            }
+            else
+            {
+                errorMessage = $"Registration failed: {response.StatusCode}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class Doctor
+    {
+        public string Id { get; set; } = string.Empty; // MongoDB auto-generated ID
+        public string Name { get; set; } = string.Empty;
+        public string Gender { get; set; } = string.Empty;
+        public int Age { get; set; }
+        public string Email { get; set; } = string.Empty;
+        public string Specialization { get; set; } = string.Empty;
+        public string Department { get; set; } = string.Empty;
+        public string Phone { get; set; } = string.Empty;
+        public string Address { get; set; } = string.Empty;
+        public int ExperienceYears { get; set; }
+        public double ConsultationFee { get; set; }
+    }
+}

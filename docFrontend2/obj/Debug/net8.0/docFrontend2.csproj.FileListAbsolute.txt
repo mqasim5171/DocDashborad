@@ -1,0 +1,98 @@
+/Users/macbookair/Downloads/docFrontend2/bin/Debug/net8.0/appsettings.Development.json
+/Users/macbookair/Downloads/docFrontend2/bin/Debug/net8.0/appsettings.json
+/Users/macbookair/Downloads/docFrontend2/bin/Debug/net8.0/docfrontend2.staticwebassets.runtime.json
+/Users/macbookair/Downloads/docFrontend2/bin/Debug/net8.0/docfrontend2.staticwebassets.endpoints.json
+/Users/macbookair/Downloads/docFrontend2/bin/Debug/net8.0/docfrontend2
+/Users/macbookair/Downloads/docFrontend2/bin/Debug/net8.0/docfrontend2.deps.json
+/Users/macbookair/Downloads/docFrontend2/bin/Debug/net8.0/docfrontend2.runtimeconfig.json
+/Users/macbookair/Downloads/docFrontend2/bin/Debug/net8.0/docfrontend2.dll
+/Users/macbookair/Downloads/docFrontend2/bin/Debug/net8.0/docfrontend2.pdb
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docFrontend2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docFrontend2.AssemblyInfoInputs.cache
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docFrontend2.AssemblyInfo.cs
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docFrontend2.csproj.CoreCompileInputs.cache
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docfrontend2.MvcApplicationPartsAssemblyInfo.cache
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docFrontend2.RazorAssemblyInfo.cache
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docFrontend2.RazorAssemblyInfo.cs
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/rjimswa.dswa.cache.json
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/scopedcss/Components/Layout/MainLayout.razor.rz.scp.css
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/scopedcss/bundle/docfrontend2.styles.css
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/scopedcss/projectbundle/docfrontend2.bundle.scp.css
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/staticwebassets.build.json
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/staticwebassets.build.json.cache
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/staticwebassets.development.json
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docfrontend2.dll
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/refint/docfrontend2.dll
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docfrontend2.pdb
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/docFrontend2.genruntimeconfig.cache
+/Users/macbookair/Downloads/docFrontend2/obj/Debug/net8.0/ref/docfrontend2.dll
+D:\mano\fyp copy\Docsystem\docFrontend2\bin\Debug\net8.0\appsettings.Development.json
+D:\mano\fyp copy\Docsystem\docFrontend2\bin\Debug\net8.0\appsettings.json
+D:\mano\fyp copy\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.staticwebassets.runtime.json
+D:\mano\fyp copy\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.staticwebassets.endpoints.json
+D:\mano\fyp copy\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.exe
+D:\mano\fyp copy\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.deps.json
+D:\mano\fyp copy\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.runtimeconfig.json
+D:\mano\fyp copy\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.dll
+D:\mano\fyp copy\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.pdb
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.GeneratedMSBuildEditorConfig.editorconfig
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.AssemblyInfoInputs.cache
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.AssemblyInfo.cs
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.csproj.CoreCompileInputs.cache
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docfrontend2.MvcApplicationPartsAssemblyInfo.cache
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.RazorAssemblyInfo.cache
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.RazorAssemblyInfo.cs
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\scopedcss\bundle\docfrontend2.styles.css
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\scopedcss\projectbundle\docfrontend2.bundle.scp.css
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets.build.json
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets.development.json
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.docfrontend2.Microsoft.AspNetCore.StaticWebAssets.props
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.docfrontend2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.build.docfrontend2.props
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.docfrontend2.props
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.docfrontend2.props
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets.pack.json
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docfrontend2.dll
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\refint\docfrontend2.dll
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docfrontend2.pdb
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.genruntimeconfig.cache
+D:\mano\fyp copy\Docsystem\docFrontend2\obj\Debug\net8.0\ref\docfrontend2.dll
+D:\mano\fyp\Docsystem\docFrontend2\bin\Debug\net8.0\appsettings.Development.json
+D:\mano\fyp\Docsystem\docFrontend2\bin\Debug\net8.0\appsettings.json
+D:\mano\fyp\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.staticwebassets.endpoints.json
+D:\mano\fyp\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.staticwebassets.runtime.json
+D:\mano\fyp\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.exe
+D:\mano\fyp\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.deps.json
+D:\mano\fyp\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.runtimeconfig.json
+D:\mano\fyp\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.dll
+D:\mano\fyp\Docsystem\docFrontend2\bin\Debug\net8.0\docfrontend2.pdb
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.GeneratedMSBuildEditorConfig.editorconfig
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.AssemblyInfoInputs.cache
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.AssemblyInfo.cs
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.csproj.CoreCompileInputs.cache
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docfrontend2.MvcApplicationPartsAssemblyInfo.cache
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.RazorAssemblyInfo.cache
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.RazorAssemblyInfo.cs
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\scopedcss\bundle\docfrontend2.styles.css
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\scopedcss\projectbundle\docfrontend2.bundle.scp.css
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets.build.json
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets.development.json
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.docfrontend2.Microsoft.AspNetCore.StaticWebAssets.props
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.docfrontend2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.build.docfrontend2.props
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.docfrontend2.props
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.docfrontend2.props
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\staticwebassets.pack.json
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docfrontend2.dll
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\refint\docfrontend2.dll
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docfrontend2.pdb
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\docFrontend2.genruntimeconfig.cache
+D:\mano\fyp\Docsystem\docFrontend2\obj\Debug\net8.0\ref\docfrontend2.dll

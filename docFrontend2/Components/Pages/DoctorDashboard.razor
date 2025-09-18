@@ -1,0 +1,591 @@
+﻿@page "/doctor-dashboard"
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject NavigationManager Nav
+
+
+<!-- Toggle Button -->
+<button class="toggle-btn @(sidebarOpen ? "sidebar-open" : "")" @onclick="ToggleSidebar">
+    @if (sidebarOpen)
+    {
+        <span>✕</span>
+    }
+    else
+    {
+        <span>☰</span>
+    }
+</button>
+
+<!-- Overlay for mobile -->
+<div class="overlay @(sidebarOpen ? "active" : "")" @onclick="CloseSidebar"></div>
+
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <div class="sidebar @(sidebarOpen ? "open" : "")">
+        @if (doctor != null)
+        {
+            <h4>Profile</h4>
+            <div class="doctor-info">
+                @if (!isEditing)
+                {
+                    <p><strong>Name:</strong> @doctor.Name</p>
+                    <p><strong>Gender:</strong> @doctor.Gender</p>
+                    <p><strong>Age:</strong> @doctor.Age</p>
+                    <p><strong>Specialization:</strong> @doctor.Specialization</p>
+                    <p><strong>Department:</strong> @doctor.Department</p>
+                    <p><strong>Email:</strong> @doctor.Email</p>
+                    <p><strong>Phone:</strong> @doctor.Phone</p>
+                    <p><strong>Address:</strong> @doctor.Address</p>
+                    <p><strong>Experience:</strong> @doctor.ExperienceYears years</p>
+                    <p><strong>Consultation Fee:</strong> $@doctor.ConsultationFee</p>
+                }
+                else
+                {
+                    <div class="edit-form">
+                        <div class="form-group">
+                            <label><strong>Name:</strong></label>
+                            <input type="text" @bind="editDoctor.Name" class="form-input" />
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Gender:</strong></label>
+                            <select @bind="editDoctor.Gender" class="form-input">
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Age:</strong></label>
+                            <input type="number" @bind="editDoctor.Age" class="form-input" min="18" max="100" />
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Specialization:</strong></label>
+                            <input type="text" @bind="editDoctor.Specialization" class="form-input" />
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Department:</strong></label>
+                            <input type="text" @bind="editDoctor.Department" class="form-input" />
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Email:</strong></label>
+                            <input type="email" @bind="editDoctor.Email" class="form-input" />
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Phone:</strong></label>
+                            <input type="text" @bind="editDoctor.Phone" class="form-input" />
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Address:</strong></label>
+                            <textarea @bind="editDoctor.Address" class="form-input form-textarea"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Experience:</strong></label>
+                            <input type="number" @bind="editDoctor.ExperienceYears" class="form-input" min="0" max="50" />
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Consultation Fee:</strong></label>
+                            <input type="number" step="0.01" @bind="editDoctor.ConsultationFee" class="form-input" min="0" />
+                        </div>
+                    </div>
+                }
+            </div>
+            
+            @if (!isEditing)
+            {
+                <button class="edit-btn" @onclick="StartEdit">Edit Info</button>
+            }
+            else
+            {
+                <div class="edit-buttons">
+                    <button class="save-btn" @onclick="SaveChanges" disabled="@isSaving">
+                        @if (isSaving)
+                        {
+                            <span>Saving...</span>
+                        }
+                        else
+                        {
+                            <span>Save</span>
+                        }
+                    </button>
+                    <button class="cancel-btn" @onclick="CancelEdit">Cancel</button>
+                </div>
+            }
+            
+            <button class="logout-btn" @onclick="Logout">Logout</button>
+        }
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content @(sidebarOpen ? "sidebar-open" : "")">
+        <div style="margin-top: 20px;">
+            
+            @if (doctor != null)
+            {
+                <h4 style="position: fixed; top: 0; left: 30; width=100%;">  Welcome, Dr. @doctor.Name!</h4>
+                
+                <div style="margin-top: 0;">   
+                    <!-- Placeholder for future content -->
+                    <div class="card" style="padding: 20px; background: white; border-radius: 8px;  margin-bottom:10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h3>Schedule</h3>
+                        <ul>
+                        <li style="margin-bottom: 10px;">Monday 03:00PM to 03:30PM with <a href="/">Patient 1</a></li>
+                        <li style="margin-bottom: 10px;">Wednesday 12:00PM to 01:00PM <a href="/">Patient 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 0;">   
+                    <!-- Placeholder for future content -->
+                    <div class="card" style="padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h3>Patients</h3>
+                        <ul>
+                        <li style="margin-bottom: 10px;"><a href="/">Patient 1</a></li>
+                        <li style="margin-bottom: 10px;"><a href="/">Patient 2</a></li>
+                        <li style="margin-bottom: 10px;"><a href="/">Patient 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                @if (!string.IsNullOrEmpty(saveMessage))
+                {
+                    <div class="alert @(saveSuccess ? "alert-success" : "alert-error")">
+                        @saveMessage
+                    </div>
+                }
+            }
+            else if (isLoading)
+            {
+                <div style="text-align: center; margin-top: 100px;">
+                    <p>Loading information...</p>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning" style="max-width: 400px; margin: 100px auto;">
+                    <p>You need to login first.</p>
+                    <button class="btn btn-primary" @onclick="GoToLogin">Go to Login</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private Doctor doctor;                       // To store the fetched doctor data
+    private Doctor editDoctor;                   // For editing
+    private bool isLoading = true;               // Loading state
+    private bool sidebarOpen = false;            // Sidebar state
+    private bool isEditing = false;              // Edit mode state
+    private bool isSaving = false;               // Saving state
+    private string saveMessage = string.Empty;   // Save result message
+    private bool saveSuccess = false;            // Save success flag
+    
+    protected override async Task OnInitializedAsync()
+    {
+        // Get phone number from query parameter
+        var uri = new Uri(Nav.Uri);
+        var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        var phone = query["phone"];
+        
+        if (!string.IsNullOrEmpty(phone))
+        {
+            await LoadDoctorData(phone);
+        }
+        else
+        {
+            isLoading = false;
+        }
+    }
+    
+    private async Task LoadDoctorData(string phoneNumber)
+    {
+        try
+        {
+            var response = await Http.GetFromJsonAsync<Doctor>($"api/doctors/by-phone/{phoneNumber}");
+            if (response != null)
+            {
+                doctor = response;
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle error if needed
+            Console.WriteLine($"Error loading doctor data: {ex.Message}");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+    
+    private void StartEdit()
+    {
+        // Create a copy of the doctor object for editing
+        editDoctor = new Doctor
+        {
+            Id = doctor.Id,
+            Name = doctor.Name,
+            Gender = doctor.Gender,
+            Age = doctor.Age,
+            Specialization = doctor.Specialization,
+            Department = doctor.Department,
+            Email = doctor.Email,
+            Phone = doctor.Phone,
+            Address = doctor.Address,
+            ExperienceYears = doctor.ExperienceYears,
+            ConsultationFee = doctor.ConsultationFee
+        };
+        isEditing = true;
+        saveMessage = string.Empty;
+    }
+    
+    private void CancelEdit()
+    {
+        isEditing = false;
+        editDoctor = null;
+        saveMessage = string.Empty;
+    }
+    
+    private async Task SaveChanges()
+    {
+        if (editDoctor == null) return;
+        
+        isSaving = true;
+        saveMessage = string.Empty;
+        
+        try
+        {
+            // Ensure the editDoctor has the same Id as the original doctor
+            editDoctor.Id = doctor.Id;
+            
+            // Send PUT request to update doctor information
+            var response = await Http.PutAsJsonAsync($"api/doctors/{editDoctor.Id}", editDoctor);
+            
+            if (response.IsSuccessStatusCode)
+            {
+                // Update the main doctor object with the edited values
+                doctor.Name = editDoctor.Name;
+                doctor.Gender = editDoctor.Gender;
+                doctor.Age = editDoctor.Age;
+                doctor.Specialization = editDoctor.Specialization;
+                doctor.Department = editDoctor.Department;
+                doctor.Email = editDoctor.Email;
+                doctor.Phone = editDoctor.Phone;
+                doctor.Address = editDoctor.Address;
+                doctor.ExperienceYears = editDoctor.ExperienceYears;
+                doctor.ConsultationFee = editDoctor.ConsultationFee;
+                
+                saveMessage = "Information updated successfully!";
+                saveSuccess = true;
+                isEditing = false;
+                
+                // Clear the message after 3 seconds
+                _ = Task.Run(async () =>
+                {
+                    await Task.Delay(3000);
+                    saveMessage = string.Empty;
+                    StateHasChanged();
+                });
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                saveMessage = $"Failed to update information: {errorContent}";
+                saveSuccess = false;
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            saveMessage = $"Network error: {ex.Message}";
+            saveSuccess = false;
+            Console.WriteLine($"HTTP error saving doctor data: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            saveMessage = $"Error: {ex.Message}";
+            saveSuccess = false;
+            Console.WriteLine($"Error saving doctor data: {ex.Message}");
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+    
+    private void ToggleSidebar()
+    {
+        sidebarOpen = !sidebarOpen;
+    }
+    
+    private void CloseSidebar()
+    {
+        sidebarOpen = false;
+    }
+    
+    private void Logout()
+    {
+        doctor = null;
+        Nav.NavigateTo("/login-page");
+    }
+    
+    private void GoToLogin()
+    {
+        Nav.NavigateTo("/login-page");
+    }
+
+    // Doctor model - must match your DoctorModel
+    public class Doctor
+    {
+        public string Id { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Gender { get; set; } = string.Empty;
+        public int Age { get; set; }
+        public string Specialization { get; set; } = string.Empty;
+        public string Department { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Phone { get; set; } = string.Empty;
+        public string Address { get; set; } = string.Empty;
+        public int ExperienceYears { get; set; }
+        public double ConsultationFee { get; set; }
+    }
+}
+
+<style>
+    .dashboard-container {
+        position: relative;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+    }
+    
+    .sidebar {
+        background-color: #2c3e50;
+        color: white;
+        width: 280px;
+        padding: 20px;
+        transform: translateX(-280px);
+        transition: transform 0.3s ease;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1000;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        overflow-y: auto;
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        flex: 1;
+        padding: 20px;
+        background-color: #f8f9fa;
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+        min-height: 100vh;
+    }
+    
+    .main-content.sidebar-open {
+        margin-left: 0;
+    }
+    
+    .toggle-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1001;
+        background-color: #3498db;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: all 0.3s ease;
+    }
+    
+    .toggle-btn:hover {
+        background-color: #2980b9;
+    }
+    
+    .toggle-btn.sidebar-open {
+        left: 300px;
+    }
+    
+    .sidebar h4 {
+        margin-bottom: 30px;
+        color: #ecf0f1;
+        border-bottom: 2px solid #34495e;
+        padding-bottom: 10px;
+    }
+    
+    .doctor-info {
+        background: white;
+        color: #2c3e50;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border-left: 4px solid #3498db;
+    }
+    
+    .doctor-info p {
+        margin-bottom: 10px;
+    }
+    
+    .doctor-info strong {
+        display: inline-block;
+        width: 120px;
+    }
+    
+    .edit-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-group label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    .form-input {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #2c3e50;
+    }
+    
+    .form-input:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    }
+    
+    .form-textarea {
+        resize: vertical;
+        min-height: 60px;
+    }
+    
+    .edit-btn {
+        background-color: #f39c12;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .edit-btn:hover {
+        background-color: #e67e22;
+    }
+    
+    .edit-buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .save-btn {
+        background-color: #27ae60;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        flex: 1;
+        font-weight: bold;
+    }
+    
+    .save-btn:hover:not(:disabled) {
+        background-color: #229954;
+    }
+    
+    .save-btn:disabled {
+        background-color: #95a5a6;
+        cursor: not-allowed;
+    }
+    
+    .cancel-btn {
+        background-color: #95a5a6;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        flex: 1;
+        font-weight: bold;
+    }
+    
+    .cancel-btn:hover {
+        background-color: #7f8c8d;
+    }
+    
+    .logout-btn {
+        background-color: #e74c3c;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .logout-btn:hover {
+        background-color: #c0392b;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .alert {
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    
+    .alert-error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+    
+    .alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeaa7;
+    }
+</style>

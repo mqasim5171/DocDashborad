@@ -1,0 +1,9 @@
+﻿@using docFrontend2.Components.Layout
+@using docFrontend2.Components  <!-- Add this line or replace with the correct namespace containing Layout -->
+
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="@typeof(docFrontend2.Components.Layout.MainLayout)" />
+        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    </Found>
+</Router>

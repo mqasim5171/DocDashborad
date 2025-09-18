@@ -1,0 +1,20 @@
+@page "/"
+@namespace docFrontend2.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="~/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>docFrontend2</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <app>
+        <!-- Fully qualify App so the compiler finds it -->
+        <component type="typeof(docFrontend2.Components.App)" render-mode="ServerPrerendered" />
+    </app>
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>

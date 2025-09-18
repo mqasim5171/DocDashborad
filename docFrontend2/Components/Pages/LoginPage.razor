@@ -1,0 +1,95 @@
+@page "/login-page"
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject NavigationManager Nav
+
+<style>
+    .login-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .login-form {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+</style>
+
+<div class="login-container">
+    <div class="login-form">
+        <h3>Doctor Login</h3>
+        
+        <!-- Input field to enter doctor Phone Number -->
+        <div class="form-group mb-3">
+            <label>Enter your Phone Number</label>
+            <input type="text" @bind="phoneNumber" class="form-control" placeholder="Enter Doctor Phone Number" />
+        </div>
+        <button class="btn btn-primary" @onclick="FetchDoctorData">Log in</button>
+
+        <!-- Display error messages -->
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="alert alert-danger mt-3">@errorMessage</div>
+        }
+    </div>
+</div>
+
+@code {
+    private string phoneNumber = string.Empty;   // To hold the doctor phone number input
+    private string errorMessage;                 // To display error messages if any
+
+    // Fetch doctor data based on the provided doctor phone number
+    private async Task FetchDoctorData()
+    {
+        if (string.IsNullOrWhiteSpace(phoneNumber))
+        {
+            errorMessage = "Please enter correct phone number.";
+            return;
+        }
+
+        try
+        {
+            var response = await Http.GetFromJsonAsync<Doctor>($"api/doctors/by-phone/{phoneNumber}");
+
+            if (response != null)
+            {
+                // Store doctor data in session/local storage or pass via navigation
+                // Navigate to dashboard with doctor data
+                Nav.NavigateTo($"/doctor-dashboard?phone={phoneNumber}");
+            }
+            else
+            {
+                errorMessage = "Doctor not found.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error fetching doctor: {ex.Message}";
+        }
+    }
+
+    // Doctor model for API response
+    public class Doctor
+    {
+        public string Id { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Specialization { get; set; } = string.Empty;
+        public int ExperienceYears { get; set; }
+        public string Phone { get; set; } = string.Empty;
+        public string Address { get; set; } = string.Empty;
+    }
+}
