@@ -1,0 +1,12 @@
+[build]
+  base = "docFrontend2"
+  command = "dotnet publish -c Release -o build"
+  publish = "build/wwwroot"
+
+[build.environment]
+  DOTNET_VERSION = "8.0.401"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
