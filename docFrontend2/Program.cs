@@ -4,15 +4,20 @@ using Microsoft.AspNetCore.Components.Web;
 var builder = WebApplication.CreateBuilder(args);
 
 // Register Razor Pages services
-builder.Services.AddRazorPages();  
-builder.Services.AddServerSideBlazor(); 
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 
 // Register UserSessionService as Singleton to store session data
-builder.Services.AddSingleton<UserSessionService>();  
+builder.Services.AddSingleton<UserSessionService>();
 
-// HttpClient for your API (configurable via environment variable in Railway)
-var apiBase = Environment.GetEnvironmentVariable("API_BASE_URL") 
-              ?? "http://localhost:5058/";  // fallback for local dev
+// ✅ HttpClient for your API (env variable with fallback)
+var apiBase = Environment.GetEnvironmentVariable("API_BASE_URL");
+if (string.IsNullOrEmpty(apiBase))
+{
+    apiBase = builder.Environment.IsDevelopment()
+        ? "http://localhost:5058/" // local dev API
+        : "https://reasonable-exploration-production.up.railway.app/"; // production fallback
+}
 
 builder.Services.AddScoped(sp => new HttpClient
 {
@@ -32,10 +37,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// Use Razor Pages and Blazor Server-side rendering
-app.MapRazorPages();  
-app.MapBlazorHub();   
-app.MapFallbackToPage("/_Host");  
+app.MapRazorPages();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
 
 // ✅ Railway Port Binding
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
