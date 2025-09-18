@@ -1,16 +1,22 @@
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Register Razor Pages services
-builder.Services.AddRazorPages();  // Add Razor Pages services
-builder.Services.AddServerSideBlazor(); // Add Blazor Server services
+builder.Services.AddRazorPages();  
+builder.Services.AddServerSideBlazor(); 
 
 // Register UserSessionService as Singleton to store session data
-builder.Services.AddSingleton<UserSessionService>();  // <-- Registering UserSessionService
+builder.Services.AddSingleton<UserSessionService>();  
 
-// HttpClient for your API
+// HttpClient for your API (configurable via environment variable in Railway)
+var apiBase = Environment.GetEnvironmentVariable("API_BASE_URL") 
+              ?? "http://localhost:5058/";  // fallback for local dev
+
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri("http://localhost:5058/") // API base address
+    BaseAddress = new Uri(apiBase)
 });
 
 var app = builder.Build();
@@ -27,8 +33,10 @@ app.UseStaticFiles();
 app.UseRouting();
 
 // Use Razor Pages and Blazor Server-side rendering
-app.MapRazorPages();  // Ensure Razor Pages are mapped
-app.MapBlazorHub();   // Blazor SignalR hub for server-side Blazor
-app.MapFallbackToPage("/_Host");  // Fallback to the default Blazor host page
+app.MapRazorPages();  
+app.MapBlazorHub();   
+app.MapFallbackToPage("/_Host");  
 
-app.Run();
+// ✅ Railway Port Binding
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Run($"http://0.0.0.0:{port}");
